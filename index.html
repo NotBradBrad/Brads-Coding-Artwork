@@ -14,14 +14,22 @@
 
 <body>
 
-  <!-- Navigation -->
   <header class="site-header">
     <nav>
       <a class="logo" href="#home">Brad's Coding Artwork</a>
 
       <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
+
+        <div class="dropdown">
+          <a href="#projects" class="dropdown-title">Projects</a>
+
+          <div class="dropdown-content">
+            <a href="#night-city">Homework 11 - Night City</a>
+            <a href="./Homework%2012/">Homework 12 - Mini Music Maker</a>
+          </div>
+        </div>
+
         <a href="#about">About</a>
       </div>
     </nav>
@@ -29,7 +37,6 @@
 
   <main id="home">
 
-    <!-- Introduction -->
     <section class="hero">
       <p class="subtitle">CREATIVE CODING PORTFOLIO • FALL 2026</p>
 
@@ -41,16 +48,14 @@
       </p>
     </section>
 
-    <!-- Projects -->
     <section id="projects" class="projects">
 
       <div class="section-heading">
-        <h2>Featured Projects</h2>
-        <p>My creative coding assignments using p5.js</p>
+        <h2>Featured Project</h2>
+        <p>Homework 11 — Night City</p>
       </div>
 
-      <!-- Homework 11 -->
-      <div class="project-card">
+      <div class="project-card" id="night-city">
 
         <h3>Night City</h3>
 
@@ -70,38 +75,8 @@
         </p>
 
       </div>
-
-      <!-- Homework 12 -->
-      <div class="project-card">
-
-        <h3>Mini Music Maker</h3>
-
-        <p>
-          For Homework 12, I created an interactive
-          music maker using p5.js. You can play
-          different musical notes by pressing keys
-          on your keyboard or clicking the piano.
-          Each note has its own color and creates
-          animations when played.
-        </p>
-
-        <a
-          class="github-link"
-          href="./Homework%2012/"
-        >
-          Play Mini Music Maker
-        </a>
-
-        <p class="instructions">
-          Press A, S, D, F, G, H, or J to play
-          different notes and create your own melody.
-        </p>
-
-      </div>
-
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
 
       <h2>About This Website</h2>
@@ -125,7 +100,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>Brad's Coding Artwork • Fall 2026</p>
   </footer>
