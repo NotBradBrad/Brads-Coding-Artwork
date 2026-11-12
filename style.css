@@ -1,5 +1,67 @@
 
-/* Projects Dropdown Menu */
+/* General Website Styling */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #0b142b, #19345b);
+  color: #d6def0;
+  min-height: 100vh;
+}
+
+/* Navigation */
+
+.site-header {
+  background: #0a1125;
+  border-bottom: 1px solid #2b4062;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #d6def0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffd477;
+}
+
+/* Projects Dropdown */
 
 .dropdown {
   position: relative;
@@ -8,6 +70,7 @@
 
 .dropdown-title {
   cursor: pointer;
+  display: block;
 }
 
 .dropdown-content {
@@ -20,7 +83,7 @@
   border: 1px solid #34496b;
   border-radius: 8px;
   padding: 8px 0;
-  z-index: 1000;
+  z-index: 1001;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -28,8 +91,8 @@
   display: block;
   padding: 12px 16px;
   color: #d6def0;
-  text-decoration: none;
   font-size: 14px;
+  font-weight: normal;
   white-space: nowrap;
 }
 
@@ -41,4 +104,195 @@
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
   display: block;
+}
+
+/* Main Layout */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Homepage Introduction */
+
+.hero {
+  text-align: center;
+  padding: 75px 20px 60px;
+}
+
+.subtitle {
+  color: #ffd477;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  color: #ffd477;
+  font-size: 46px;
+  margin: 20px 0;
+}
+
+.intro {
+  color: #c1cee3;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Projects Section */
+
+.projects {
+  padding: 30px 0 65px;
+  scroll-margin-top: 90px;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  color: #ffd477;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: #c1cee3;
+  margin-top: 0;
+}
+
+/* Project Cards */
+
+.project-card {
+  background: #152542;
+  border: 1px solid #34496b;
+  border-radius: 18px;
+  padding: 35px 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.project-card h3 {
+  color: #ffd477;
+  font-size: 28px;
+  margin: 0 0 20px;
+}
+
+.project-card p {
+  color: #c1cee3;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto 25px;
+}
+
+/* Night City Canvas */
+
+#canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  max-width: 100%;
+}
+
+#canvas-container canvas {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+  border-radius: 12px;
+}
+
+.project-card .instructions {
+  margin-top: 25px;
+  margin-bottom: 0;
+  color: #b7c6dd;
+  font-size: 14px;
+}
+
+/* About Section */
+
+.about {
+  border-top: 1px solid #34496b;
+  padding: 60px 0 80px;
+  scroll-margin-top: 90px;
+}
+
+.about h2 {
+  color: #ffd477;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.about p {
+  color: #c1cee3;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+/* Buttons */
+
+.github-link {
+  display: inline-block;
+  padding: 14px 22px;
+  margin-top: 15px;
+  color: #ffd477;
+  background: transparent;
+  border: 1px solid #ffd477;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  background: #ffd477;
+  color: #0a1125;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid #34496b;
+  color: #b7c6dd;
+  font-size: 14px;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 50px 10px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .project-card {
+    padding: 25px 15px;
+  }
+
+  .project-card h3 {
+    font-size: 24px;
+  }
+
+  .dropdown-content {
+    right: -70px;
+    min-width: 230px;
+  }
 }
