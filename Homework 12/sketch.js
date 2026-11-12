@@ -241,10 +241,6 @@ function drawPiano() {
     textStyle(BOLD);
     textSize(25);
     text(letters[i], x + 49, pianoY + 112);
-
-    textStyle(NORMAL);
-    textSize(14);
-    text(noteNames[i], x + 49, pianoY + 140);
   }
 
   // Black piano keys (decorative)
