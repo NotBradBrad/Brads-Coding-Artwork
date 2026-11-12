@@ -5,9 +5,12 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  padding: 0;
   background: linear-gradient(
     180deg,
     #080f24 0%,
@@ -18,86 +21,232 @@ body {
   min-height: 100vh;
 }
 
-/* Main website layout */
-main {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 65px 25px 80px;
-  text-align: center;
+/* Navigation bar */
+.site-header {
+  background: rgba(8, 15, 36, 0.95);
+  border-bottom: 1px solid #263957;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Website title */
-h1 {
-  font-size: 48px;
-  font-weight: 800;
-  margin: 0 0 35px;
-  letter-spacing: -1.5px;
+nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 22px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
   color: #ffffff;
+  font-size: 19px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
-/* Project title */
-h2 {
-  font-size: 30px;
-  font-weight: 700;
-  margin: 0 0 20px;
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #c8d3e8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
   color: #ffdc91;
 }
 
-/* Project descriptions */
-p {
-  font-size: 16px;
-  line-height: 1.8;
+/* Main website layout */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+/* Homepage introduction */
+.hero {
+  text-align: center;
+  padding: 75px 0 65px;
+}
+
+.subtitle {
+  color: #ffdc91;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 20px 0;
+  letter-spacing: -1.5px;
+}
+
+.intro {
   color: #c8d3e8;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Featured projects */
+.projects {
+  padding-bottom: 70px;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  color: #ffdc91;
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.section-heading p {
+  color: #c8d3e8;
+  font-size: 15px;
+}
+
+.project-card {
+  background: #142440;
+  border: 1px solid #304566;
+  border-radius: 18px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #ffdc91;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.project-card p {
+  color: #c8d3e8;
+  font-size: 15px;
+  line-height: 1.8;
   max-width: 750px;
   margin: 0 auto 25px;
 }
 
-/* Night City canvas */
-canvas {
+/* Night City p5.js canvas */
+#canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px auto;
+}
+
+#canvas-container canvas {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 35px auto 30px;
-  border-radius: 14px;
+  border-radius: 12px;
   box-shadow:
-    0 0 35px rgba(80, 130, 220, 0.25),
-    0 15px 45px rgba(0, 0, 0, 0.35);
+    0 0 30px rgba(80, 130, 220, 0.2),
+    0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
-/* Website links */
-a {
+.project-card .instructions {
+  font-size: 14px;
+  color: #aebfda;
+  margin-bottom: 0;
+}
+
+/* About section */
+.about {
+  padding: 50px 0 80px;
+  border-top: 1px solid #304566;
+}
+
+.about h2 {
+  color: #ffdc91;
+  font-size: 27px;
+  margin-top: 0;
+}
+
+.about p {
+  color: #c8d3e8;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+/* GitHub repository link */
+.github-link {
   display: inline-block;
   color: #ffdc91;
   text-decoration: none;
   font-weight: 600;
-  padding: 12px 22px;
+  padding: 13px 22px;
   border: 1px solid #ffdc91;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
-a:hover {
+.github-link:hover {
   background: #ffdc91;
   color: #101d38;
   transform: translateY(-3px);
 }
 
-/* Smaller screens */
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #304566;
+}
+
+footer p {
+  color: #aebfda;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Mobile screens */
 @media (max-width: 650px) {
-  main {
-    padding: 40px 15px;
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 50px 0;
   }
 
   h1 {
     font-size: 34px;
   }
 
-  h2 {
-    font-size: 25px;
+  .intro {
+    font-size: 15px;
   }
 
-  p {
-    font-size: 14px;
+  .project-card {
+    padding: 18px;
+  }
+
+  .section-heading h2,
+  .about h2 {
+    font-size: 24px;
   }
 }
