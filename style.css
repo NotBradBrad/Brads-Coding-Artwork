@@ -1,7 +1,103 @@
-html, body {
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(
+    180deg,
+    #080f24 0%,
+    #142b50 100%
+  );
+  color: #f5f7ff;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
 }
+
+/* Main website layout */
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 65px 25px 80px;
+  text-align: center;
+}
+
+/* Website title */
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 35px;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+}
+
+/* Project title */
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #ffdc91;
+}
+
+/* Project descriptions */
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #c8d3e8;
+  max-width: 750px;
+  margin: 0 auto 25px;
+}
+
+/* Night City canvas */
 canvas {
   display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 35px auto 30px;
+  border-radius: 14px;
+  box-shadow:
+    0 0 35px rgba(80, 130, 220, 0.25),
+    0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* Website links */
+a {
+  display: inline-block;
+  color: #ffdc91;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 22px;
+  border: 1px solid #ffdc91;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background: #ffdc91;
+  color: #101d38;
+  transform: translateY(-3px);
+}
+
+/* Smaller screens */
+@media (max-width: 650px) {
+  main {
+    padding: 40px 15px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
