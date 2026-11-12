@@ -4,9 +4,12 @@ let planeY = 225;
 let cloudMove = 0;
 
 function setup() {
-  createCanvas(900, 600);
+  let canvas = createCanvas(900, 600);
+  canvas.parent("canvas-container");
+
   frameRate(60);
   noStroke();
+
   describe("A nighttime city with moving clouds and a commercial airplane that follows the mouse");
 }
 
@@ -122,7 +125,7 @@ function draw() {
     rect(x, 369, 55, 5);
   }
 
-  // Airplane
+  // Commercial airplane
   airplane(planeX / 1.5, planeY / 1.5);
 
   pop();
@@ -222,7 +225,7 @@ function airplane(x, y) {
   vertex(7, 6);
   endShape(CLOSE);
 
-  // Long commercial airplane body
+  // Airplane body
   fill(235, 239, 244);
   beginShape();
   vertex(-105, -8);
@@ -244,7 +247,7 @@ function airplane(x, y) {
   vertex(-105, 8);
   endShape(CLOSE);
 
-  // Lower fuselage shading
+  // Lower body shading
   fill(205, 212, 225);
   beginShape();
   vertex(-101, 7);
@@ -283,7 +286,7 @@ function airplane(x, y) {
   vertex(94, -5);
   endShape(CLOSE);
 
-  // Main swept-back wing
+  // Main wing
   fill(185, 197, 213);
   beginShape();
   vertex(-5, 8);
@@ -321,7 +324,7 @@ function airplane(x, y) {
   fill(210, 215, 225);
   ellipse(-12, 24, 13, 4);
 
-  // Rear engine detail
+  // Rear engine
   fill(130, 145, 165);
   ellipse(-43, 27, 20, 11);
 
