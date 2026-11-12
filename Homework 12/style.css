@@ -1,7 +1,98 @@
-html, body {
+
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
+  background: #100d22;
+  color: #e8dcff;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
+
+header {
+  padding: 35px 20px 15px;
+}
+
+header h1 {
+  color: #dfbaff;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+header p {
+  color: #b7a9d4;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 canvas {
   display: block;
+  max-width: 100%;
+  height: auto !important;
+  border: 2px solid #70549e;
+  border-radius: 15px;
+  box-shadow: 0 0 35px rgba(130, 80, 200, 0.2);
+}
+
+.instructions {
+  max-width: 750px;
+  margin: 15px auto 35px;
+  padding: 25px;
+  background: #1d1738;
+  border: 1px solid #5c458c;
+  border-radius: 15px;
+}
+
+.instructions h2 {
+  color: #dfbaff;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.instructions p {
+  color: #c5b8dd;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+footer {
+  padding: 20px;
+  border-top: 1px solid #34294f;
+  color: #9789b3;
+  font-size: 13px;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .instructions {
+    margin: 15px;
+    padding: 20px;
+  }
 }
